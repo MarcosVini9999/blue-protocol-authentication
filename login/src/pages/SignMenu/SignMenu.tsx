@@ -5,9 +5,7 @@ import logo from "assets/svg/blue-protocol-logo.svg";
 
 export const SignMenu: React.FC = () => {
   const [loading, setLoading] = React.useState(true);
-  window.addEventListener("load", () =>
-    setTimeout(() => setLoading(false), 1000),
-  );
+  setTimeout(() => setLoading(false), 500);
 
   return (
     <SignMenuWrapper>
