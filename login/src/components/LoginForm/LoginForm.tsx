@@ -22,19 +22,11 @@ export const LoginForm: React.FC = () => {
   const [passwordStatus, setPasswordStatus] = React.useState(false);
   const onEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    if (validateEmail(email)) {
-      setEmailStatus(false);
-    } else {
-      setEmailStatus(true);
-    }
+    setEmailStatus(!validateEmail(email));
   };
   const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (validatePassword(password)) {
-      setPasswordStatus(false);
-    } else {
-      setPasswordStatus(true);
-    }
+    setPasswordStatus(!validatePassword(password));
   };
 
   return (

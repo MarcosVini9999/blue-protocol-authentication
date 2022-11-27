@@ -1,11 +1,13 @@
 const email = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+/i;
-const password =
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/i;
+const password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])$/;
+
+export const validateLength = (value: string) =>
+  value.length >= 8 && value.length <= 16;
+
+export const validatePassword = (value: string) => {
+  return password.test(value) && validateLength(value);
+};
 
 export function validateEmail(value: string) {
   return email.test(value);
-}
-
-export function validatePassword(value: string) {
-  return password.test(value);
 }
