@@ -3,17 +3,13 @@ import React from "react";
 import {
   LoginFormContainer,
   LoginFormWrapper,
-  SociaLogin,
   StyledOr,
 } from "./LoginForm.styles";
 import logoLogin from "assets/img/bp-logo.webp";
-import discordIcon from "assets/svg/discord-icon.svg";
-import facebookIcon from "assets/svg/facebook-icon.svg";
-import instagramIcon from "assets/svg/instagram-icon.svg";
-import twitterIcon from "assets/svg/twitter-icon.svg";
 import { ExitButton } from "components/ExitButton/ExitButton";
 import { Link } from "react-router-dom";
 import { validateEmail, validatePassword } from "utils";
+import { SociaLogin } from "components/SocialLogin/SociaLogin";
 
 export const LoginForm: React.FC = () => {
   const [email, setEmail] = React.useState("");
@@ -60,20 +56,7 @@ export const LoginForm: React.FC = () => {
           OR
           <StyledOr />
         </Typography>
-        <SociaLogin>
-          <Link to="/login">
-            <img src={discordIcon} alt="" />
-          </Link>
-          <Link to="/login">
-            <img src={facebookIcon} alt="" />
-          </Link>
-          <Link to="/login">
-            <img src={instagramIcon} alt="" />
-          </Link>
-          <Link to="/login">
-            <img src={twitterIcon} alt="" />
-          </Link>
-        </SociaLogin>
+        <SociaLogin />
         <Link to="/register">
           <Typography>Don't you have an account ?</Typography>
         </Link>

@@ -1,10 +1,16 @@
 import { Button, TextField, Typography } from "@mui/material";
 import { ExitButton } from "components/ExitButton/ExitButton";
 import React from "react";
-import { RegisterFormContainer, SignUpFormWrapper } from "./SignUpForm.styles";
+import {
+  RegisterFormContainer,
+  RegisterImage,
+  SignUpFormWrapper,
+  StyledOr,
+} from "./SignUpForm.styles";
 import logoRegister from "assets/img/bp-logo.webp";
 import { Link } from "react-router-dom";
 import { validateEmail, validatePassword } from "utils";
+import { SociaLogin } from "components/SocialLogin/SociaLogin";
 
 export const SignUpForm: React.FC = () => {
   const [email, setEmail] = React.useState("");
@@ -37,7 +43,7 @@ export const SignUpForm: React.FC = () => {
     <SignUpFormWrapper>
       <ExitButton to="/" />
       <RegisterFormContainer>
-        <img src={logoRegister} alt="" />
+        <RegisterImage src={logoRegister} alt="" />
         <TextField
           id="outlined-basic"
           label="E-mail"
@@ -76,6 +82,12 @@ export const SignUpForm: React.FC = () => {
         <Button variant="contained">
           <Typography>Register</Typography>
         </Button>
+        <Typography>
+          <StyledOr />
+          OR
+          <StyledOr />
+        </Typography>
+        <SociaLogin />
         <Link to="/login">Do you have an account ?</Link>
       </RegisterFormContainer>
     </SignUpFormWrapper>
