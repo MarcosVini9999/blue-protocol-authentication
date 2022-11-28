@@ -16,12 +16,7 @@ export const SignUpForm: React.FC = () => {
   const [email, setEmail] = React.useState("");
   const [emailStatus, setEmailStatus] = React.useState(false);
   const [password, setPassword] = React.useState("");
-  const [passwordStatus, setPasswordStatus] = React.useState(false);
   const [confirmationPassword, setConfirmationPassword] = React.useState("");
-  const [confirmationPasswordStatus, setConfirmationPasswordStatus] =
-    React.useState(false);
-  const [isConfirmationPasswordDisable, setIsConfirmationPasswordDisable] =
-    React.useState(true);
 
   const onEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -29,14 +24,11 @@ export const SignUpForm: React.FC = () => {
   };
   const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    setPasswordStatus(!validatePassword(password));
-    setIsConfirmationPasswordDisable(!validatePassword(password));
   };
   const onConfirmationPasswordChange = (
     event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setConfirmationPassword(event.target.value);
-    setConfirmationPasswordStatus(password === confirmationPassword);
   };
 
   return (
@@ -66,7 +58,7 @@ export const SignUpForm: React.FC = () => {
           variant="filled"
           value={password}
           onChange={onPasswordChange}
-          error={passwordStatus}
+          error={!validatePassword(password)}
         />
         <TextField
           id="outlined-password-input"
@@ -76,12 +68,12 @@ export const SignUpForm: React.FC = () => {
           variant="filled"
           value={confirmationPassword}
           onChange={onConfirmationPasswordChange}
-          error={confirmationPasswordStatus}
-          disabled={isConfirmationPasswordDisable}
+          error={!(password === confirmationPassword)}
+          disabled={!validatePassword(password)}
         />
         <Button
           variant="contained"
-          disabled={password === confirmationPassword}
+          disabled={!(password === confirmationPassword)}
         >
           <Typography>Register</Typography>
         </Button>
