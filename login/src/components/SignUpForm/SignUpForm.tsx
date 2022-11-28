@@ -79,7 +79,10 @@ export const SignUpForm: React.FC = () => {
           error={confirmationPasswordStatus}
           disabled={isConfirmationPasswordDisable}
         />
-        <Button variant="contained">
+        <Button
+          variant="contained"
+          disabled={password === confirmationPassword}
+        >
           <Typography>Register</Typography>
         </Button>
         <Typography>
