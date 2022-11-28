@@ -15,14 +15,12 @@ export const LoginForm: React.FC = () => {
   const [email, setEmail] = React.useState("");
   const [emailStatus, setEmailStatus] = React.useState(false);
   const [password, setPassword] = React.useState("");
-  const [passwordStatus, setPasswordStatus] = React.useState(false);
   const onEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
     setEmailStatus(!validateEmail(email));
   };
   const onPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    setPasswordStatus(!validatePassword(password));
   };
 
   return (
@@ -46,7 +44,7 @@ export const LoginForm: React.FC = () => {
           variant="filled"
           value={password}
           onChange={onPasswordChange}
-          error={passwordStatus}
+          error={!validatePassword(password)}
         />
         <Button variant="contained">
           <Typography>LOG IN</Typography>
