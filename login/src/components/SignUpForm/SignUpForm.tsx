@@ -73,7 +73,9 @@ export const SignUpForm: React.FC = () => {
         />
         <Button
           variant="contained"
-          disabled={!(password === confirmationPassword)}
+          disabled={
+            !(password === confirmationPassword) || !validatePassword(password)
+          }
         >
           <Typography>Register</Typography>
         </Button>
