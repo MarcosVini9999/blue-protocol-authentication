@@ -2,6 +2,10 @@
 
 ![project-example](./readme-assets/login-example.gif)
 
+### 🟡Project Status
+
+- Paused, the project only has the artistic concept and "functional" fields
+
 ## 📚 Description
 
 - A login and registration flow with an artistic concept of the blue protocol game.
