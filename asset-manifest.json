@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/blue-protocol-authentication/static/js/main.e4c510a8.js",
+    "main.js": "/blue-protocol-authentication/static/js/main.271c1ed6.js",
     "static/media/wallpaper.jpg": "/blue-protocol-authentication/static/media/wallpaper.a04a9189a5d109c1c5fc.jpg",
     "static/media/bp-logo.webp": "/blue-protocol-authentication/static/media/bp-logo.fe972104e049158509fb.webp",
     "static/media/blue-protocol-logo.svg": "/blue-protocol-authentication/static/media/blue-protocol-logo.66fee3732c9138b6ceeb37a4672e07f0.svg",
@@ -9,9 +9,9 @@
     "static/media/discord-icon.svg": "/blue-protocol-authentication/static/media/discord-icon.1c6bedae24c2d171b645ca836bce3666.svg",
     "static/media/facebook-icon.svg": "/blue-protocol-authentication/static/media/facebook-icon.773c1a5a33d10795c60ab6efdd7a6954.svg",
     "index.html": "/blue-protocol-authentication/index.html",
-    "main.e4c510a8.js.map": "/blue-protocol-authentication/static/js/main.e4c510a8.js.map"
+    "main.271c1ed6.js.map": "/blue-protocol-authentication/static/js/main.271c1ed6.js.map"
   },
   "entrypoints": [
-    "static/js/main.e4c510a8.js"
+    "static/js/main.271c1ed6.js"
   ]
 }
