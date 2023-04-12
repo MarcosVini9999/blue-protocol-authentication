@@ -11,7 +11,9 @@ export const ExitButton: React.FC<ExitButtonProps> = ({ to }) => {
   return (
     <LinkButton to={to}>
       <ArrowBackIcon fontSize="medium" />
-      <Typography>BACK</Typography>
+      <Typography component={"span"} variant={"body2"}>
+        BACK
+      </Typography>
     </LinkButton>
   );
 };

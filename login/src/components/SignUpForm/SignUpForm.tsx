@@ -26,7 +26,7 @@ export const SignUpForm: React.FC = () => {
     setPassword(event.target.value);
   };
   const onConfirmationPasswordChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     setConfirmationPassword(event.target.value);
   };
@@ -44,14 +44,8 @@ export const SignUpForm: React.FC = () => {
           onChange={onEmailChange}
           error={emailStatus}
         />
+        <TextField label="User Name" type="text" variant="filled" />
         <TextField
-          id="outlined-password-input"
-          label="User Name"
-          type="text"
-          variant="filled"
-        />
-        <TextField
-          id="outlined-password-input"
           label="Password"
           type="password"
           autoComplete="current-password"
@@ -61,7 +55,6 @@ export const SignUpForm: React.FC = () => {
           error={!validatePassword(password)}
         />
         <TextField
-          id="outlined-password-input"
           label="Password Confirmation"
           type="password"
           autoComplete="current-password"
@@ -77,9 +70,11 @@ export const SignUpForm: React.FC = () => {
             !(password === confirmationPassword) || !validatePassword(password)
           }
         >
-          <Typography>Register</Typography>
+          <Typography component={"span"} variant={"body2"}>
+            Register
+          </Typography>
         </Button>
-        <Typography>
+        <Typography component={"span"} variant={"body2"}>
           <StyledOr />
           OR
           <StyledOr />

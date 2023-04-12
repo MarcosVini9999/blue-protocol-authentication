@@ -16,7 +16,7 @@ export const LinkButton = styled(Link)({
   textDecoration: "none",
   color: "white",
   transition: "all 0.3s ease",
-  "& p": {
+  "& span": {
     fontSize: "23px",
     fontFamily: "fantasy",
   },

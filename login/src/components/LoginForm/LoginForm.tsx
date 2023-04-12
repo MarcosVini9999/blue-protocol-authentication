@@ -37,7 +37,6 @@ export const LoginForm: React.FC = () => {
           error={emailStatus}
         />
         <TextField
-          id="outlined-password-input"
           label="Password"
           type="password"
           autoComplete="current-password"
@@ -47,16 +46,20 @@ export const LoginForm: React.FC = () => {
           error={!validatePassword(password)}
         />
         <Button variant="contained">
-          <Typography>LOG IN</Typography>
+          <Typography component={"span"} variant={"body2"}>
+            LOG IN
+          </Typography>
         </Button>
-        <Typography>
+        <Typography component={"span"} variant={"body2"}>
           <StyledOr />
           OR
           <StyledOr />
         </Typography>
         <SociaLogin />
         <Link to="/register">
-          <Typography>Don't you have an account ?</Typography>
+          <Typography component={"span"} variant={"body2"}>
+            Don't you have an account ?
+          </Typography>
         </Link>
       </LoginFormContainer>
     </LoginFormWrapper>
