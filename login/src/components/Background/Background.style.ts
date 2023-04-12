@@ -5,6 +5,5 @@ import wallpaper from "assets/img/wallpaper.jpg";
 export const BackgroundWrapper = styled(Box)({
   backgroundImage: `url("${wallpaper}")`,
   backgroundSize: "cover",
-  margin: "-8px",
   height: "100vh",
 });
